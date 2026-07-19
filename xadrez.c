@@ -7,7 +7,7 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    int peca, movimento,quantidade;
+    int peca, movimento,quantidade,i = 1;
     int opcao/*peça*/,opcao2/*jogar novamente*/,opcao3/*lado*/;
 do{
     printf("*********************\n");
@@ -31,29 +31,43 @@ do{
         printf("3.Cima\n");
         printf("4.Baixo\n");
         scanf("%d",&opcao3);
+        printf("Digite, Quantas casa deseja andar?\n");
+        scanf("%d", &quantidade);
         //lado que a torre vai
         switch (opcao3)
         {
         // vai para direita
         case 1:
-        printf("Direita\n");
+
+        for(int i = 1; i <= quantidade; i++){
+            printf("%d Direita\n", i);
+        }           
             break;
         // vai para esquerda
         case 2:
-        printf("Esquerda\n");
+
+        for(int i = 1; i <= quantidade; i++){
+            printf("%d Esquerda\n", i);
+        }          
             break;
         // vai para cima
         case 3:
-        printf("Cima\n");
+
+            for(int i = 1; i <= quantidade; i++){
+            printf("%d Cima\n", i);
+        }           
             break;
         // vai para baixa
         case 4:
-        printf("baixo\n");
+        for(i = 1; i <= quantidade; i++){
+            printf("%d Baixa\n", i);
+        }    
             break;
 
         default:
         printf("Opção invalida!\n");
             break;
+
         }
         break;
 
@@ -61,12 +75,42 @@ do{
         case 2:
         printf("bispo\n");
         printf("para qual lado quer ir?\n");
-        printf("1. Direita\n");
-        printf("2.Esquerda\n");
-        printf("3.Cima\n");
-        printf("4.Baixo\n");
+        printf("1. Direita Cima\n");
+        printf("2. Direita Baixo\n");
+        printf("3.Esquerda Cima\n");
+        printf("4. Esquerda Baixo\n");
         scanf("%d",&opcao3);
         
+        case 1:
+        //Direta cima
+        for(int i = 1; i <= quantidade; i++){
+            printf("%d Direita Cima\n", i);
+        }           
+            break;
+        // Direita baixa
+        case 2:
+
+        for(int i = 1; i <= quantidade; i++){
+            printf("%d Direita Baixa\n", i);
+        }          
+            break;
+        // Esquerda cima
+        case 3:
+
+            for(int i = 1; i <= quantidade; i++){
+            printf("%d Esquerda Cima\n", i);
+        }           
+            break;
+        // Esquerda baixa
+        case 4:
+        for(i = 1; i <= quantidade; i++){
+            printf("%d Esquerda Baixa\n", i);
+        }    
+            break;
+
+        default:
+        printf("Opção invalida!\n");
+            break;
         //lado que a Bispo vai
 
         break;
@@ -76,9 +120,14 @@ do{
         printf("rainha\n");
         printf("para qual lado quer ir?\n");
         printf("1. Direita\n");
+        printf("2. Direita Cima\n");
+        printf("2. Direita Baixo\n");
         printf("2.Esquerda\n");
-        printf("3.Cima\n");
-        printf("4.Baixo\n");
+        printf("3.Esquerda Cima\n");
+        printf("4. Esquerda Baixo\n");
+        printf("3.Cima\n");       
+        printf("4.Baixo\n");        
+        
         scanf("%d",&opcao3);
         
         //lado que a Rainha vai
