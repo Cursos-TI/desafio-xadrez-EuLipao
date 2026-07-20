@@ -18,6 +18,7 @@ do{
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     scanf("%d",&opcao);
     //opcao da peça
     switch(opcao)
@@ -197,6 +198,99 @@ do{
         
     }
        break;
+       //cavalo
+          case 4:
+            printf("para qual lado quer ir?\n");
+            printf("Cavalo\n");
+            printf("1. Cima Direita\n");
+            printf("2. Cima Esquerda\n");
+            printf("3. Direita Cima\n");
+            printf("4. Direita Baixo\n");
+            printf("5. Esquerda Cima\n");
+            printf("6. Esquerda Baixo\n");
+            printf("7. Baixo Direita \n");      
+            printf("8. Baixo Esquerda\n");        
+            scanf("%d",&opcao3);  
+        //lado que a cavalo vai
+        switch (opcao3)
+        {
+        //Cima cima Direita
+        case 1:
+            for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Cima\n", j);
+                }
+                printf("%d direita\n",i);
+            }
+            break;
+        // cima cima esquerda
+        case 2:
+            for(i=1;i<2;i++){
+                for(int j = 1;j <3; j++){
+                    printf("%d Cima\n", j);
+                }
+                printf("%d esquerda\n",i);
+            }
+            break;
+        // direita direita cima
+        case 3:
+             for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Direita\n", j);
+                }
+                printf("%d Cima\n",i);
+            }
+            break;
+        //direita direta baixa
+        case 4:
+             for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Direita\n", j);
+                }
+                printf("%d Baixo\n",i);
+            }
+            break;
+        //Esquerda esquerda cima
+        case 5:
+             for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Esquerda\n", j);
+                }
+                printf("%d Cima\n",i);
+            }
+            break;
+        //esquerda esquerda baixo
+        case 6:
+            for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Esquerda\n", j);
+                }
+                printf("%d Baixo\n",i);
+            }            
+            break;
+        // baixo baixo direita
+        case 7:
+            for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Baixo\n", j);
+                }
+                printf("%d Direita\n",i);
+            }
+            break;
+        //baixo baixo esquerda
+        case 8:
+            for(i=1;i<2;i++){
+                for(int j = 1;j <3;j++){
+                    printf("%d Baixo\n", j);
+                }
+                printf("%d Esquerda\n",i);
+            }
+            break;
+        default:
+        printf("Opção invalida!\n");
+            break;
+        }
+        break;
 
         default:
         printf("Opção invalida!\n");
