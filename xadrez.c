@@ -2,7 +2,62 @@
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
+//função andar para direita
+void andarDireita(int n){
+        if(n > 0){
+        andarDireita(n - 1);
+        printf("%d Direita \n", n);
+        }
+}
+//função andar para Esquerda
+void andarEsquerda(int n){
+        if(n > 0){
+        andarEsquerda(n - 1);
+        printf("%d Esquerda \n", n);
+        }
+}
+//função andar para Cima
+void andarCima(int n){
+        if(n > 0){
+        andarCima(n - 1);
+        printf("%d Cima \n", n);
+        }
+}
+//função andar para Baixo
+void andarBaixo(int n){
+        if(n > 0){
+        andarBaixo(n - 1);
+        printf("%d Baixo \n", n);
+        }
+}
+//função andar para Direita Cima
+void andarDireitaCima(int n){
+        if(n > 0){
+        andarDireitaCima(n - 1);
+        printf("%d Direita Cima \n", n);
+        }
+}
+//função andar para Direita Baixo
+void andarDireitaBaixo(int n){
+        if(n > 0){
+        andarDireitaBaixo(n - 1);
+        printf("%d Direita Baixo \n", n);
+        }
+}
+//função andar para Esquerda Cima
+void andarEsquerdaCima(int n){
+        if(n > 0){
+        andarEsquerdaCima(n - 1);
+        printf("%d Esquerda Cima \n", n);
+        }
+}
+//função andar para Esquerda Baixo
+void andarEsquerdaBaixo(int n){
+        if(n > 0){
+        andarEsquerdaBaixo(n - 1);
+        printf("%d Esquerda Baixo \n", n);
+        }
+}
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -39,39 +94,25 @@ do{
         {
         // vai para direita
         case 1:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita\n", i);
-        }           
+            andarDireita(quantidade);
             break;
         // vai para esquerda
         case 2:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Esquerda\n", i);
-        }          
+            andarEsquerda(quantidade);
             break;
         // vai para cima
         case 3:
-
-            for(int i = 1; i <= quantidade; i++){
-            printf("%d Cima\n", i);
-        }           
+            andarCima(quantidade);
             break;
         // vai para baixa
         case 4:
-        for(i = 1; i <= quantidade; i++){
-            printf("%d Baixa\n", i);
-        }    
+            andarBaixo(quantidade);
             break;
-
         default:
         printf("Opção invalida!\n");
             break;
-
         }
         break;
-
         //bispo
         case 2:
         printf("bispo\n");
@@ -84,41 +125,28 @@ do{
         printf("Digite, Quantas casa deseja andar?\n");
         scanf("%d", &quantidade);
     switch (opcao3)
-    {
-   
+    {   
         case 1:
         //Direta cima
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita Cima\n", i);
-        }           
+        andarDireitaCima(quantidade);        
             break;
         // Direita baixa
         case 2:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita Baixa\n", i);
-        }          
+        andarDireitaBaixo(quantidade);         
             break;
         // Esquerda cima
         case 3:
-
-            for(int i = 1; i <= quantidade; i++){
-            printf("%d Esquerda Cima\n", i);
-        }           
+        andarEsquerdaCima(quantidade);         
             break;
         // Esquerda baixa
         case 4:
-        for(i = 1; i <= quantidade; i++){
-            printf("%d Esquerda Baixa\n", i);
-        }    
+        andarEsquerdaBaixo(quantidade);
             break;
-
         default:
         printf("Opção invalida!\n");
             break;
     }  
         break;
-
         //rainha
         case 3:
         printf("rainha\n");
@@ -135,67 +163,43 @@ do{
         printf("Digite, Quantas casa deseja andar?\n");
         scanf("%d", &quantidade);
     switch (opcao3)
-    {
-        
+    {        
         // vai para direita
         case 1:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita\n", i);
-        }           
-            break;
-       
+        andarDireita(quantidade);          
+            break;       
         case 2:
         //Direta cima
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita Cima\n", i);
-        }           
+        andarDireitaCima(quantidade);           
             break;
         // Direita baixa
         case 3:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Direita Baixa\n", i);
-        }          
+        andarDireitaBaixo(quantidade);         
             break;
        // vai para esquerda
         case 4:
-
-        for(int i = 1; i <= quantidade; i++){
-            printf("%d Esquerda\n", i);
-        }          
+        andarEsquerda(quantidade);         
             break;
         //esquerda cima
         case 5:
-        for(i = 1; i <= quantidade; i++){
-            printf("%d Esquerda Cima\n", i);
-        }    
+        andarEsquerdaCima(quantidade);  
             break;
 
         // Esquerda baixa
         case 6:
-        for(i = 1; i <= quantidade; i++){
-            printf("%d Esquerda Baixa\n", i);
-        }    
+        andarEsquerdaBaixo(quantidade);
             break;
         // vai para cima
         case 7:
-
-            for(int i = 1; i <= quantidade; i++){
-            printf("%d Cima\n", i);
-        }           
+        andarCima(quantidade);           
             break;
         // vai para baixa
         case 8:
-        for(i = 1; i <= quantidade; i++){
-            printf("%d Baixa\n", i);
-        }    
+        andarBaixo(quantidade);   
             break;
-
         default:
         printf("Opção invalida!\n");
-            break;
-        
+            break;        
     }
        break;
        //cavalo
